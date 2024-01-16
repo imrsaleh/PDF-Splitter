@@ -7,7 +7,7 @@ Requirements
 Usage:
 
 Download PDF_Splitter.py file on your machine
-- Install the PyPDF2 library using the following command:
+- Open CMD and Install the PyPDF2 library using the following command:
 
 ```
 pip install PyPDF2==2.1.0
