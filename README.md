@@ -11,7 +11,7 @@ Download or clone this repository on your machine
 pip install PyPDF2==2.1.0
 ```
 - Place the PDF file that you want to split in the same folder that contains the script
-- Run the script in CMD using the following command:
+- Open CMD put yourself in the same location and use the following command:
 ```
 python PDF_Splitter.py book.pdf 20
 ```
@@ -19,7 +19,7 @@ python PDF_Splitter.py book.pdf 20
 
 2- number of pages per file ( 20 for example )
 
-- The script will create the split PDF files in the same folder and name them with numbers
+- The script will generate split PDF files in the same folder and will be named according to the pages inside
 
 ContributionIf you have any suggestions or improvements for this project, feel free to create a pull request or an issue.
 
