@@ -23,4 +23,7 @@ python PDF_Splitter.py book.pdf 20
 
 ContributionIf you have any suggestions or improvements for this project, feel free to create a pull request or an issue.
 
-License This project is licensed under the MIT License. See the LICENSE file for more details.
+
+
+# License
+This project is licensed under the MIT License. See the LICENSE file for more details.
