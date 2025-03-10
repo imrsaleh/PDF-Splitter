@@ -14,10 +14,10 @@ args = parser.parse_args()
 
 # Open the original file for reading
 source_pdf = open(args.file, "rb")
-pdf_reader = PyPDF2.PdfFileReader(source_pdf)
+pdf_reader = PyPDF2.PdfReader(source_pdf)
 
 # Get the number of pages in the original file
-total_pages = pdf_reader.getNumPages()
+total_pages = len(pdf_reader.pages)
 
 # Determine the base name and the extension of the original file
 base_name, ext = os.path.splitext(os.path.basename(args.file))
@@ -66,13 +66,13 @@ else:
     # Loop over the number of resulting files
     for i in range(num_files):
         # Create a PdfFileWriter object to write the pages in each file
-        pdf_writer = PyPDF2.PdfFileWriter()
+        pdf_writer = PyPDF2.PdfWriter()
         # Calculate the first and the last page number in each file
         start_page = i * pages_per_file
         end_page = min((i + 1) * pages_per_file, total_pages)
         # Loop over the pages in each file and add them to the object
         for j in range(start_page, end_page):
-            pdf_writer.addPage(pdf_reader.getPage(j))
+            pdf_writer.add_page(pdf_reader.pages[j])
         # Determine the name of the resulting file
         file_name = f"{start_page + 1}-{end_page}.pdf"
         # Determine the target path for the resulting file
